@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 
 gem 'rails', '4.2.3'
@@ -12,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-github', '~> 1.1.2'
 
+gem 'rails-assets-angular'
 
 group :development, :test do
   gem 'byebug'
