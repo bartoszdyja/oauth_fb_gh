@@ -12,8 +12,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-github', '~> 1.1.2'
+gem 'sprockets', '2.12.3'
 
 gem 'rails-assets-angular'
+gem 'rails-assets-angular-ui-router'
+gem 'angular-rails-templates'
+
 
 group :development, :test do
   gem 'byebug'
