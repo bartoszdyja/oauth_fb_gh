@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/auth/github/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
   resources :app, only: [:index]
-  get "*path" => "app#index"
+  #get "*path" => "app#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,9 +1,13 @@
 class SessionsController < ApplicationController
   def create     
-    auth = request.env["omniauth.auth"]     
-    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)     
-    session[:user_id] = user.id     
-    redirect_to rails_path, :notice => "Signed in!"
+    auth = request.env["omniauth.auth"] 
+    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth) 
+
+    render json: { token: auth["credentials"]["token"] }
+    # auth = request.env["omniauth.auth"]     
+    # user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) || User.create_with_omniauth(auth)     
+    # session[:user_id] = user.id     
+    # redirect_to rails_path, :notice => auth
   end
  
   def destroy
