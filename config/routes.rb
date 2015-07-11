@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'app#index'
   get "/rails" => "sessions#index"
+  get "/me" => "sessions#me"
   get "/auth/github/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
   resources :app, only: [:index]
